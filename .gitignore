@@ -1,0 +1,24 @@
+# Build outputs
+build/
+bin/
+obj/
+
+# Compiled files
+*.o
+*.obj
+*.exe
+*.out
+*.so
+*.dll
+*.a
+
+# Logs and temporary files
+*.log
+*.tmp
+
+# VS Code local settings
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
