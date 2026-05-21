@@ -415,7 +415,6 @@ class FireSimulator {
                 q = q->next; continue;
             }
 
->>>>>>> main
             LinkedList<std::string> seq = plan.node_sequence;
             if (seq.get_size() < 2) { q = q->next; continue; }
             seq.pop_front();
