@@ -415,6 +415,7 @@ class FireSimulator {
                 q = q->next; continue;
             }
 
+>>>>>>> main
             LinkedList<std::string> seq = plan.node_sequence;
             if (seq.get_size() < 2) { q = q->next; continue; }
             seq.pop_front();
@@ -472,6 +473,8 @@ class FireSimulator {
     }
 
     void releaseStaleQueues() {
+        // Koridor bloklandıysa kuyruktakileri serbest bırak (bir sonraki tick'te
+        // yeni rota arayacaklar).
         WaitingQueue* wq = queues_head_;
         while (wq != nullptr) {
             Corridor* c = wq->corridor;
@@ -502,6 +505,7 @@ class FireSimulator {
     int totalPeople() const { return person_count_; }
     int nodeCount() const { return node_count_; }
     int corridorCount() const { return corridor_count_; }
+    // Düğüm-bazlı yangın yoğunluğunu dış kod (örn. GUI) okuyabilsin diye.
 
     double fireIntensityAt(const std::string& node_id) const {
         CellNode* n = findNode(node_id);
@@ -513,6 +517,7 @@ class FireSimulator {
         Corridor* c = (a && b) ? findCorridor(a, b) : nullptr;
         return (c == nullptr) ? true : c->blocked;
     }
+
 
     void snapshot(int& out_time, int& out_alive, int& out_evac, int& out_dead) const {
         out_time = time_step_;
@@ -532,6 +537,7 @@ class FireSimulator {
     const Corridor* corridorsHead() const { return corridors_head_; }
 
    private:
+
     struct DijkstraRecord {
         CellNode* node;
         long long distance;
@@ -554,10 +560,11 @@ class FireSimulator {
 
     struct DjCompare {
         bool operator()(const DjItem& a, const DjItem& b) const {
-            return a.distance < b.distance;
+            return a.distance < b.distance;   // min-heap
         }
     };
 
+    // -------- Helpers --------
     static double clamp01(double x) {
         if (x < 0.0) return 0.0;
         if (x > 1.0) return 1.0;
@@ -627,6 +634,11 @@ class FireSimulator {
             delete tmp;
         }
     }
+
+    // Predictive routing maliyeti:
+    //   base = traversal_time
+    // + capacity_penalty (load >= capacity ise +traversal_time)
+    // + fire_penalty     (yakında yanacak koridorlar pahalı)
 
     long long predictiveCost(Corridor* c) const {
         if (c->blocked || c->fire_intensity >= fire_block_threshold_) {
