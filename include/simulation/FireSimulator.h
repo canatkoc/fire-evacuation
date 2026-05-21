@@ -412,12 +412,10 @@ class FireSimulator {
 
             EvacPath plan = findSafestExit(here->id);
             if (!plan.reachable) {
-                // Şu an çıkış yok; sonraki tick'te tekrar dene. Hâlâ ulaşılamıyorsa
-                // yangın gelene kadar bekler ve casualty olur.
                 q = q->next; continue;
             }
 
-            // Yolun ikinci elemanını (next hop) al
+>>>>>>> main
             LinkedList<std::string> seq = plan.node_sequence;
             if (seq.get_size() < 2) { q = q->next; continue; }
             seq.pop_front();
@@ -507,8 +505,8 @@ class FireSimulator {
     int totalPeople() const { return person_count_; }
     int nodeCount() const { return node_count_; }
     int corridorCount() const { return corridor_count_; }
-
     // Düğüm-bazlı yangın yoğunluğunu dış kod (örn. GUI) okuyabilsin diye.
+
     double fireIntensityAt(const std::string& node_id) const {
         CellNode* n = findNode(node_id);
         return (n == nullptr) ? 0.0 : n->fire_intensity;
@@ -520,7 +518,7 @@ class FireSimulator {
         return (c == nullptr) ? true : c->blocked;
     }
 
-    // Anlık özet (iostream gerektirmez): basit getters üzerinden.
+
     void snapshot(int& out_time, int& out_alive, int& out_evac, int& out_dead) const {
         out_time = time_step_;
         out_evac = evacuated_count_;
@@ -528,21 +526,18 @@ class FireSimulator {
         out_alive = person_count_ - evacuated_count_ - casualty_count_;
     }
 
-    // Tuning hooks (varsayılanlar makul; istersen değiştir).
     void setFireSpreadRate(double r)        { fire_spread_rate_ = r; }
     void setFireBlockThreshold(double t)    { fire_block_threshold_ = clamp01(t); }
     void setNodeLethalThreshold(double t)   { node_lethal_threshold_ = clamp01(t); }
     void setPredictionHorizon(int h)        { prediction_horizon_ = (h < 1) ? 1 : h; }
     void setPredictionPenalty(double k)     { prediction_penalty_ = (k < 0.0) ? 0.0 : k; }
 
-    // İterasyon yardımcısı (GUI/raporlama için): tüm Person'ları read-only yürür.
-    // STL container yok; intrusive listenin head pointer'ı dönülür.
     const Person* peopleHead() const { return people_head_; }
     const CellNode* nodesHead() const { return nodes_head_; }
     const Corridor* corridorsHead() const { return corridors_head_; }
 
    private:
-    // -------- Dijkstra altyapısı --------
+
     struct DijkstraRecord {
         CellNode* node;
         long long distance;
@@ -644,6 +639,7 @@ class FireSimulator {
     //   base = traversal_time
     // + capacity_penalty (load >= capacity ise +traversal_time)
     // + fire_penalty     (yakında yanacak koridorlar pahalı)
+
     long long predictiveCost(Corridor* c) const {
         if (c->blocked || c->fire_intensity >= fire_block_threshold_) {
             return std::numeric_limits<long long>::max();
@@ -651,7 +647,7 @@ class FireSimulator {
 
         long long capacity_penalty = 0;
         if (c->capacity > 0 && c->current_load >= c->capacity) {
-            capacity_penalty = c->traversal_time;       // ortalama bir bekleme
+            capacity_penalty = c->traversal_time;
         }
 
         long long fire_penalty = 0;
