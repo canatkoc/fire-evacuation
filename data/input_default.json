@@ -1,0 +1,26 @@
+{
+  "building": {
+    "floors": 2,
+    "fire_origin": "ROOM_C"
+  },
+  "nodes": [
+    {"id": "ROOM_A",  "type": "room",      "floor": 1, "occupants": 4, "flammability": 0.4, "x": 170, "y": 260},
+    {"id": "ROOM_B",  "type": "room",      "floor": 1, "occupants": 3, "flammability": 0.5, "x": 340, "y": 420},
+    {"id": "ROOM_C",  "type": "room",      "floor": 1, "occupants": 3, "flammability": 0.6, "x": 540, "y": 420},
+    {"id": "HALL_1",  "type": "hallway",   "floor": 1, "occupants": 0, "flammability": 0.3, "x": 340, "y": 260},
+    {"id": "HALL_2",  "type": "hallway",   "floor": 1, "occupants": 0, "flammability": 0.3, "x": 540, "y": 260},
+    {"id": "STAIR_S", "type": "stairwell", "floor": 1, "occupants": 0, "flammability": 0.2, "x": 170, "y": 420},
+    {"id": "EXIT_N",  "type": "exit",      "floor": 1, "occupants": 0, "flammability": 0.0, "x": 720, "y": 260},
+    {"id": "EXIT_S",  "type": "exit",      "floor": 1, "occupants": 0, "flammability": 0.0, "x": 170, "y": 540}
+  ],
+  "edges": [
+    {"from": "ROOM_A",  "to": "HALL_1",  "capacity": 2, "traversal_time": 2, "flammability": 0.3},
+    {"from": "HALL_1",  "to": "HALL_2",  "capacity": 2, "traversal_time": 3, "flammability": 0.3},
+    {"from": "HALL_2",  "to": "EXIT_N",  "capacity": 3, "traversal_time": 2, "flammability": 0.2},
+    {"from": "HALL_1",  "to": "ROOM_B",  "capacity": 2, "traversal_time": 2, "flammability": 0.5},
+    {"from": "HALL_2",  "to": "ROOM_C",  "capacity": 2, "traversal_time": 2, "flammability": 0.5},
+    {"from": "ROOM_A",  "to": "STAIR_S", "capacity": 1, "traversal_time": 3, "flammability": 0.4},
+    {"from": "STAIR_S", "to": "EXIT_S",  "capacity": 2, "traversal_time": 2, "flammability": 0.2}
+  ],
+  "fire_spread_rate": 0.18
+}

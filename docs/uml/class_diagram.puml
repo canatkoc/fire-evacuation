@@ -1,0 +1,191 @@
+@startuml class_diagram
+' =====================================================================
+' Fire Evacuation Route Planner & Simulator - Class Diagram
+' CSE 211 Data Structures Term Project (PROJ-02)
+' Render:  plantuml docs/uml/class_diagram.puml
+' =====================================================================
+
+skinparam classAttributeIconSize 0
+skinparam linetype ortho
+hide empty members
+title Fire Evacuation Simulator - Class Diagram
+
+' --------------------- Custom Data Structures ------------------------
+package "data_structures" {
+
+  class "Node<T>" as Node {
+    + data : T
+    + next : Node<T>*
+  }
+
+  class "LinkedList<T>" as LinkedList {
+    - head : Node<T>*
+    - tail : Node<T>*
+    - size : int
+    + push_back(value : T) : void
+    + push_front(value : T) : void
+    + pop_front() : T
+    + remove(value : T) : void
+    + clear() : void
+    + is_empty() : bool
+    + get_size() : int
+  }
+
+  class "Queue<T>" as Queue {
+    - l_list : LinkedList<T>
+    + enqueue(value : T) : void
+    + dequeue() : T
+    + is_empty() : bool
+    + get_size() : int
+  }
+
+  class "PriorityQueue<T,Compare>" as PriorityQueue {
+    - root_ : HeapNode*
+    - size_ : size_t
+    + push(value : T) : void
+    + pop() : void
+    + top() : T
+    + empty() : bool
+  }
+
+  class Graph {
+    - vertices_head_ : Vertex*
+    - node_count_ : int
+    + addNode(id, type, floor, occupants) : bool
+    + addEdge(from, to, time, capacity, bidir) : bool
+    + shortestPath(from, to) : PathResult
+    + nearestExit(from) : PathResult
+    + clear() : void
+  }
+}
+
+' --------------------------- I/O Layer -------------------------------
+package "io" {
+
+  class SceneNode {
+    + id : string
+    + type : string
+    + occupants : int
+    + flammability : double
+    + x : int
+    + y : int
+  }
+
+  class SceneEdge {
+    + from : string
+    + to : string
+    + capacity : int
+    + traversal_time : int
+  }
+
+  class SceneData {
+    + floors : int
+    + fire_origin : string
+    + fire_spread_rate : double
+    + appendNode(n : SceneNode*) : void
+    + appendEdge(e : SceneEdge*) : void
+  }
+
+  class JsonSceneParser <<utility>> {
+    + {static} loadFromFile(path, out) : void
+    + {static} loadFromString(text, out) : void
+  }
+
+  class SceneLoader <<utility>> {
+    + {static} apply(scene, sim) : void
+    + {static} applyLayout(scene, layout) : void
+    + {static} loadInto(path, sim) : void
+  }
+}
+
+' ------------------------ Simulation Core ----------------------------
+package "simulation" {
+
+  class CellNode {
+    + id : string
+    + on_fire : bool
+    + fire_intensity : double
+    + people_in_node : int
+  }
+
+  class Corridor {
+    + traversal_time : int
+    + capacity : int
+    + current_load : int
+    + blocked : bool
+  }
+
+  class Person {
+    + id : int
+    + current_location : string
+    + evacuated : bool
+    + dead : bool
+  }
+
+  class FireSimulator {
+    - graph_ : Graph*
+    - nodes_head_ : CellNode*
+    - corridors_head_ : Corridor*
+    - people_head_ : Person*
+    - time_step_ : int
+    + addNode(id, type, floor, occ, flam) : bool
+    + addCorridor(from, to, time, cap, flam) : bool
+    + igniteNode(id, intensity) : bool
+    + step() : void
+    + findSafestExit(start) : EvacPath
+    + simulationFinished() : bool
+    + snapshot(t, alive, evac, dead) : void
+  }
+}
+
+' ----------------------------- GUI -----------------------------------
+package "gui" {
+
+  class Layout {
+    - head_ : Pos*
+    + set(id, x, y) : void
+    + get(id, x, y) : bool
+  }
+
+  class SimulationController {
+    - sim_ : FireSimulator*
+    - state_ : State
+    - tick_interval_ : double
+    + start() : void
+    + togglePause() : void
+    + singleStep() : void
+    + update(dt : double) : void
+  }
+
+  class Renderer {
+    + init(w, h, title, font) : bool
+    + drawScene(sim, layout) : void
+    + drawButton(btn, active, hover) : void
+    + present() : void
+  }
+}
+
+' --------------------------- Relations -------------------------------
+LinkedList o-- Node          : owns >
+Queue *-- LinkedList         : composes >
+Graph ..> PriorityQueue      : uses (Dijkstra) >
+FireSimulator ..> PriorityQueue : uses (Dijkstra) >
+
+SceneData o-- SceneNode      : owns >
+SceneData o-- SceneEdge      : owns >
+JsonSceneParser ..> SceneData : fills >
+SceneLoader ..> SceneData    : reads >
+SceneLoader ..> JsonSceneParser : uses >
+SceneLoader ..> FireSimulator : configures >
+SceneLoader ..> Layout       : configures >
+
+FireSimulator o-- CellNode   : owns >
+FireSimulator o-- Corridor   : owns >
+FireSimulator o-- Person     : owns >
+FireSimulator --> Graph      : mirrors >
+
+SimulationController --> FireSimulator : drives >
+Renderer ..> FireSimulator   : renders >
+Renderer ..> Layout          : reads positions >
+
+@enduml

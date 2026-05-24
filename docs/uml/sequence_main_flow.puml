@@ -1,0 +1,83 @@
+@startuml sequence_main_flow
+' =====================================================================
+' Fire Evacuation Simulator - Sequence Diagram: load + simulate one tick
+' CSE 211 Data Structures Term Project (PROJ-02)
+' Render:  plantuml docs/uml/sequence_main_flow.puml
+' =====================================================================
+
+title Fire Evacuation Simulator - Main Flow (Load Scene + One Tick)
+
+actor User
+participant "main\n(sim_demo / main_gui)" as Main
+participant "JsonSceneParser" as Parser
+participant "SceneData" as Scene
+participant "SceneLoader" as Loader
+participant "FireSimulator" as Sim
+participant "Graph" as Graph
+participant "PriorityQueue" as PQ
+
+== Startup: load building scene from data/ ==
+
+User -> Main : run [input_file]
+activate Main
+
+Main -> Parser : loadFromFile(path, scene)
+activate Parser
+Parser -> Parser : scan JSON text
+Parser -> Scene : appendNode() / appendEdge()
+activate Scene
+Scene --> Parser : intrusive lists filled
+deactivate Scene
+Parser --> Main : SceneData populated
+deactivate Parser
+
+Main -> Loader : apply(scene, sim)
+activate Loader
+loop for each SceneNode
+    Loader -> Sim : addNode(id, type, floor, occ, flam)
+    Sim -> Graph : addNode(...)
+end
+loop for each SceneEdge
+    Loader -> Sim : addCorridor(from, to, time, cap, flam)
+    Sim -> Graph : addEdge(...)
+end
+Loader -> Sim : igniteNode(fire_origin)
+Loader --> Main : simulator ready
+deactivate Loader
+
+== Per-tick simulation step ==
+
+User -> Main : advance (loop / SPACE)
+Main -> Sim : step()
+activate Sim
+
+Sim -> Sim : propagateFire()
+note right of Sim : fire spreads to neighbours,\ncorridors may become blocked
+
+loop for each Person needing a route
+    Sim -> Sim : findSafestExit(location)
+    activate Sim
+    Sim -> PQ : push / pop (Dijkstra frontier)
+    activate PQ
+    PQ --> Sim : next nearest node
+    deactivate PQ
+    Sim --> Sim : EvacPath (predictive, fire-aware)
+    deactivate Sim
+end
+
+Sim -> Sim : stepPeople()
+note right of Sim : move people, enforce\ncorridor capacity, queue at bottlenecks
+
+Sim -> Sim : processCasualties()
+note right of Sim : people trapped by fire\nare marked as casualties
+
+Sim --> Main : tick complete
+deactivate Sim
+
+Main -> Sim : snapshot(t, alive, evac, dead)
+Sim --> Main : population counts
+Main --> User : render / print state
+
+deactivate Main
+
+@enduml

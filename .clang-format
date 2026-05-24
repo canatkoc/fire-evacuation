@@ -1,0 +1,27 @@
+# clang-format configuration for the Fire Evacuation project.
+# Based on the Google C++ style with minor project adjustments.
+---
+Language:        Cpp
+BasedOnStyle:    Google
+Standard:        c++17
+IndentWidth:     4
+TabWidth:        4
+UseTab:          Never
+ColumnLimit:     100
+AccessModifierOffset: -2
+NamespaceIndentation: None
+PointerAlignment: Left
+AllowShortFunctionsOnASingleLine: Inline
+AllowShortIfStatementsOnASingleLine: WithoutElse
+AllowShortLoopsOnASingleLine: false
+BinPackArguments: false
+BinPackParameters: false
+BreakBeforeBraces: Attach
+SortIncludes:    true
+IncludeBlocks:   Preserve
+SpaceBeforeParens: ControlStatements
+AlignAfterOpenBracket: Align
+AlignTrailingComments: true
+KeepEmptyLinesAtTheStartOfBlocks: false
+MaxEmptyLinesToKeep: 1
+...

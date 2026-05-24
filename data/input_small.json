@@ -1,0 +1,13 @@
+{
+  "building": { "floors": 1, "fire_origin": "R1" },
+  "nodes": [
+    {"id": "R1", "type": "room",    "floor": 1, "occupants": 2, "flammability": 0.5},
+    {"id": "H1", "type": "hallway", "floor": 1, "occupants": 0, "flammability": 0.3},
+    {"id": "E1", "type": "exit",    "floor": 1, "occupants": 0, "flammability": 0.0}
+  ],
+  "edges": [
+    {"from": "R1", "to": "H1", "capacity": 2, "traversal_time": 1, "flammability": 0.3},
+    {"from": "H1", "to": "E1", "capacity": 2, "traversal_time": 1, "flammability": 0.2}
+  ],
+  "fire_spread_rate": 0.2
+}

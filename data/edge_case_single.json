@@ -1,0 +1,8 @@
+{
+  "building": { "floors": 1, "fire_origin": "" },
+  "nodes": [
+    {"id": "ONLY_EXIT", "type": "exit", "floor": 1, "occupants": 0, "flammability": 0.0}
+  ],
+  "edges": [],
+  "fire_spread_rate": 0.5
+}
