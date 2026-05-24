@@ -1,0 +1,8 @@
+<map id="include/gui/Layout.h" name="include/gui/Layout.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="72,5,225,31"/>
+<area shape="rect" id="Node000002" href="$Renderer_8h.html" title=" " alt="" coords="5,79,172,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="132,43,100,80,96,77,128,40"/>
+<area shape="rect" id="Node000003" href="$main__gui_8cpp.html" title="SDL2 graphical frontend for the Fire Evacuation simulator." alt="" coords="83,152,215,177"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="168,41,186,78,187,99,181,120,161,153,157,150,176,118,182,99,181,79,163,43"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="109,113,141,150,137,154,105,116"/>
+</map>

@@ -1,0 +1,11 @@
+<map id="FireSimulator::DijkstraRecord" name="FireSimulator::DijkstraRecord">
+<area shape="rect" id="Node000001" title="Per&#45;node record for the fire&#45;aware Dijkstra distance table." alt="" coords="5,525,211,611"/>
+<area shape="poly" id="edge5_Node000001_Node000001" title=" " alt="" coords="212,552,230,557,237,568,228,579,224,575,232,568,227,562,210,557"/>
+<area shape="rect" id="Node000002" href="$structCellNode.html" title="A simulation&#45;side node mirroring a Graph vertex." alt="" coords="43,263,173,448"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="111,448,111,509,105,509,105,448"/>
+<area shape="poly" id="edge4_Node000002_Node000002" title=" " alt="" coords="174,331,192,338,200,355,197,366,190,374,187,370,193,364,195,356,189,342,172,336"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="69,135,147,200"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="111,200,111,246,105,246,105,200"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="43,5,173,85"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="111,99,111,134,105,134,105,99"/>
+</map>

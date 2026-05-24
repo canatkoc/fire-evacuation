@@ -1,0 +1,37 @@
+<map id="include/data_structures/Queue.h" name="include/data_structures/Queue.h">
+<area shape="rect" id="Node000001" title="Generic FIFO queue built on LinkedList." alt="" coords="949,5,1124,45"/>
+<area shape="rect" id="Node000002" href="$FireSimulator_8h.html" title="Core fire&#45;evacuation simulation engine." alt="" coords="713,181,856,221"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="936,36,903,44,870,56,839,73,812,95,799,115,791,138,786,181,781,181,786,137,794,113,808,92,836,69,867,51,901,39,935,31"/>
+<area shape="rect" id="Node000009" href="$test__boundary_8cpp.html" title="Edge&#45;case and boundary tests for all custom data structures and the simulator." alt="" coords="989,269,1151,309"/>
+<area shape="poly" id="edge20_Node000001_Node000009" title=" " alt="" coords="1043,58,1070,269,1065,269,1038,59"/>
+<area shape="rect" id="Node000010" href="$test__performance_8cpp.html" title="Performance benchmarks for the custom data structures and simulation engine." alt="" coords="1175,269,1346,309"/>
+<area shape="poly" id="edge21_Node000001_Node000010" title=" " alt="" coords="1059,55,1116,132,1185,208,1243,267,1239,271,1181,212,1112,135,1055,58"/>
+<area shape="rect" id="Node000012" href="$SimEntities_8h.html" title="Per&#45;tick simulation entities: CellNode, Corridor, Person, WaitingQueue." alt="" coords="823,93,965,133"/>
+<area shape="poly" id="edge16_Node000001_Node000012" title=" " alt="" coords="995,55,927,96,924,91,992,50"/>
+<area shape="rect" id="Node000013" href="$test__data__structures_8cpp.html" title=" " alt="" coords="1125,93,1273,133"/>
+<area shape="poly" id="edge22_Node000001_Node000013" title=" " alt="" coords="1086,49,1165,91,1162,96,1083,54"/>
+<area shape="rect" id="Node000003" href="$Renderer_8h.html" title=" " alt="" coords="5,277,172,302"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="700,213,470,237,192,272,148,279,147,274,191,267,470,231,699,208"/>
+<area shape="rect" id="Node000004" href="$main__gui_8cpp.html" title="SDL2 graphical frontend for the Fire Evacuation simulator." alt="" coords="224,365,356,390"/>
+<area shape="poly" id="edge10_Node000002_Node000004" title=" " alt="" coords="699,210,569,218,424,231,300,249,259,260,237,271,231,282,230,294,239,319,258,343,278,363,274,367,254,347,235,322,225,294,226,280,233,267,257,255,299,244,423,226,569,213,699,204"/>
+<area shape="rect" id="Node000005" href="$SimulationController_8h.html" title=" " alt="" coords="247,277,490,302"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="700,223,425,279,423,274,699,217"/>
+<area shape="rect" id="Node000006" href="$SceneLoader_8h.html" title="Builds a FireSimulator (and optional GUI Layout) from a SceneData." alt="" coords="515,277,697,302"/>
+<area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="735,230,631,279,629,274,732,225"/>
+<area shape="rect" id="Node000007" href="$sim__demo_8cpp.html" title="Command&#45;line entry point for the Fire Evacuation simulator." alt="" coords="537,365,677,390"/>
+<area shape="poly" id="edge11_Node000002_Node000007" title=" " alt="" coords="769,235,744,273,711,311,670,343,631,367,628,362,667,339,707,307,739,270,765,232"/>
+<area shape="rect" id="Node000008" href="$test__scene__io_8cpp.html" title="Unit and integration tests for the data/ input pipeline." alt="" coords="704,357,863,397"/>
+<area shape="poly" id="edge13_Node000002_Node000008" title=" " alt="" coords="787,235,786,357,781,357,782,235"/>
+<area shape="poly" id="edge12_Node000002_Node000009" title=" " alt="" coords="861,223,1008,267,1007,272,860,228"/>
+<area shape="poly" id="edge14_Node000002_Node000010" title=" " alt="" coords="870,215,1164,267,1176,269,1175,274,1163,272,869,220"/>
+<area shape="rect" id="Node000011" href="$test__fire__simulator_8cpp.html" title=" " alt="" coords="824,269,964,309"/>
+<area shape="poly" id="edge15_Node000002_Node000011" title=" " alt="" coords="821,228,871,267,868,271,818,232"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="129,305,264,362,262,367,127,310"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="351,314,303,366,299,362,347,310"/>
+<area shape="poly" id="edge7_Node000006_Node000004" title=" " alt="" coords="551,308,333,367,332,362,550,303"/>
+<area shape="poly" id="edge8_Node000006_Node000007" title=" " alt="" coords="609,316,610,364,604,364,604,316"/>
+<area shape="poly" id="edge9_Node000006_Node000008" title=" " alt="" coords="643,306,745,355,743,360,641,310"/>
+<area shape="poly" id="edge18_Node000012_Node000002" title=" " alt="" coords="861,144,811,183,807,179,857,140"/>
+<area shape="poly" id="edge17_Node000012_Node000003" title=" " alt="" coords="810,135,142,279,141,274,809,130"/>
+<area shape="poly" id="edge19_Node000012_Node000011" title=" " alt="" coords="897,147,897,269,891,269,891,147"/>
+</map>

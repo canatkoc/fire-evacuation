@@ -1,0 +1,42 @@
+# Doxyfile for the Fire Evacuation Route Planner & Simulator
+# Generate documentation with:  make docs   (or: doxygen Doxyfile)
+
+PROJECT_NAME           = "Fire Evacuation Route Planner & Simulator"
+PROJECT_BRIEF          = "CSE 211 Data Structures Term Project - PROJ-02"
+PROJECT_NUMBER         = 1.0.0
+
+OUTPUT_DIRECTORY       = docs
+HTML_OUTPUT            = html
+GENERATE_HTML          = YES
+GENERATE_LATEX         = NO
+
+INPUT                  = include src tests docs/design_document.md
+FILE_PATTERNS          = *.h *.hpp *.cpp *.md
+RECURSIVE              = YES
+USE_MDFILE_AS_MAINPAGE = docs/design_document.md
+
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = YES
+EXTRACT_STATIC         = YES
+EXTRACT_LOCAL_CLASSES  = YES
+
+JAVADOC_AUTOBRIEF      = YES
+QT_AUTOBRIEF           = YES
+OPTIMIZE_OUTPUT_FOR_C  = NO
+BUILTIN_STL_SUPPORT    = YES
+
+SORT_MEMBER_DOCS       = YES
+SORT_BRIEF_DOCS        = YES
+GENERATE_TODOLIST      = YES
+
+HAVE_DOT               = YES
+CLASS_DIAGRAMS         = YES
+UML_LOOK               = YES
+CALL_GRAPH             = NO
+CALLER_GRAPH           = NO
+DOT_IMAGE_FORMAT       = svg
+INTERACTIVE_SVG        = YES
+
+QUIET                  = YES
+WARNINGS               = YES
+WARN_IF_UNDOCUMENTED   = NO

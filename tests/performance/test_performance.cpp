@@ -2,7 +2,8 @@
  * @file test_performance.cpp
  * @brief Performance benchmarks for the custom data structures and simulation engine.
  *
- * These tests verify that the core operations stay within reasonable time bounds
+ * These tests verify structural integrity and asymptotic behavior using large inputs.
+ * Wall-clock timings are printed for information only because Valgrind slows execution.
  * for large inputs.  They do NOT use wall-clock timeouts (which are flaky in CI);
  * instead they measure operation counts and structural integrity to confirm
  * asymptotic behaviour — O(log n) for PriorityQueue, O(1) amortised for
@@ -21,6 +22,7 @@
 #include <functional>
 #include <iostream>
 #include <string>
+#include <limits>
 
 #include "data_structures/Graph.h"
 #include "data_structures/LinkedList.h"
@@ -70,8 +72,7 @@ void perf_linked_list_large_push_pop() {
 
   assert(list.is_empty());
   assert(list.get_size() == 0);
-  // Generous 5-second budget — any reasonable machine finishes in < 100 ms.
-  assert(ms < 5000.0);
+  (void)ms;  // measured only for reporting; not asserted under Valgrind
   printPassed("perf_linked_list_large_push_pop (N=100k, " +
               std::to_string(static_cast<int>(ms)) + " ms)");
 }
@@ -92,7 +93,7 @@ void perf_linked_list_push_front_and_clear() {
   assert(list.get_size() == N);
   list.clear();
   assert(list.is_empty());
-  assert(ms < 5000.0);
+  (void)ms;  // measured only for reporting; not asserted under Valgrind
   printPassed("perf_linked_list_push_front_and_clear (N=50k, " +
               std::to_string(static_cast<int>(ms)) + " ms)");
 }
@@ -119,7 +120,7 @@ void perf_queue_large_enqueue_dequeue() {
   });
 
   assert(q.is_empty());
-  assert(ms < 5000.0);
+  (void)ms;  // measured only for reporting; not asserted under Valgrind
   printPassed("perf_queue_large_enqueue_dequeue (N=100k, " +
               std::to_string(static_cast<int>(ms)) + " ms)");
 }
@@ -157,7 +158,7 @@ void perf_priority_queue_push_pop_sorted() {
   });
 
   assert(pq.empty());
-  assert(ms < 5000.0);
+  (void)ms;  // measured only for reporting; not asserted under Valgrind
   printPassed("perf_priority_queue_push_pop_sorted (N=10k, " +
               std::to_string(static_cast<int>(ms)) + " ms)");
 }
@@ -193,7 +194,7 @@ void perf_priority_queue_interleaved() {
   });
 
   assert(pq.empty());
-  assert(ms < 5000.0);
+  (void)ms;  // measured only for reporting; not asserted under Valgrind
   printPassed("perf_priority_queue_interleaved (5k rounds, " +
               std::to_string(static_cast<int>(ms)) + " ms)");
 }
@@ -228,7 +229,7 @@ void perf_graph_dijkstra_chain_50() {
 
   assert(result.reachable);
   assert(result.total_cost == N);  // 50 hops of cost 1
-  assert(ms < 1000.0);
+  (void)ms;  // measured only for reporting; not asserted under Valgrind
   printPassed("perf_graph_dijkstra_chain_50 (cost=" +
               std::to_string(result.total_cost) + ", " +
               std::to_string(static_cast<int>(ms)) + " ms)");
@@ -265,7 +266,7 @@ void perf_graph_dijkstra_dense_repeated() {
     }
   });
 
-  assert(ms < 5000.0);
+  (void)ms;  // measured only for reporting; not asserted under Valgrind
   printPassed("perf_graph_dijkstra_dense_repeated (20 nodes, 100 queries, " +
               std::to_string(static_cast<int>(ms)) + " ms)");
 }
@@ -321,7 +322,7 @@ void perf_fire_simulator_medium_scenario() {
   int dead  = sim.casualtyCount();
   assert(evac + dead == total);  // everyone accounted for
   assert(total == ROOM_COUNT * PEOPLE_PER_ROOM);
-  assert(ms < 10000.0);
+  (void)ms;  // measured only for reporting; not asserted under Valgrind
   printPassed("perf_fire_simulator_medium_scenario (45 people, 200 ticks, " +
               std::to_string(static_cast<int>(ms)) + " ms, evac=" +
               std::to_string(evac) + ", dead=" + std::to_string(dead) + ")");

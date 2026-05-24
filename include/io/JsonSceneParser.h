@@ -244,7 +244,12 @@ class JsonSceneParser {
         if (peek(c) == ']') { ++c.i; return; }
         while (true) {
             SceneNode* node = new SceneNode();
-            parseOneNode(c, *node);
+            try {
+                parseOneNode(c, *node);
+            } catch (...) {
+                delete node;  // avoid leaking the node on malformed input
+                throw;
+            }
             out.appendNode(node);
             skipWs(c);
             if (peek(c) == ',') { ++c.i; continue; }
@@ -290,7 +295,12 @@ class JsonSceneParser {
         if (peek(c) == ']') { ++c.i; return; }
         while (true) {
             SceneEdge* edge = new SceneEdge();
-            parseOneEdge(c, *edge);
+            try {
+                parseOneEdge(c, *edge);
+            } catch (...) {
+                delete edge;  // avoid leaking the edge on malformed input
+                throw;
+            }
             out.appendEdge(edge);
             skipWs(c);
             if (peek(c) == ',') { ++c.i; continue; }

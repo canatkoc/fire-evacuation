@@ -1,0 +1,51 @@
+<map id="include/io/SceneLoader.h" name="include/io/SceneLoader.h">
+<area shape="rect" id="Node000001" title="Builds a FireSimulator (and optional GUI Layout) from a SceneData." alt="" coords="353,5,536,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="441,313,499,339"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="448,31,471,300,465,300,443,31"/>
+<area shape="rect" id="Node000003" href="$Graph_8h.html" title="Adjacency&#45;list directed/undirected graph with Dijkstra shortest&#45;path." alt="" coords="793,225,928,265"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="537,25,687,45,756,59,804,76,829,91,846,106,859,125,870,151,875,182,872,212,867,211,870,182,865,153,854,128,842,110,826,95,802,81,755,64,687,50,536,30"/>
+<area shape="rect" id="Node000010" href="$FireSimulator_8h.html" title="Core fire&#45;evacuation simulation engine." alt="" coords="586,79,791,104"/>
+<area shape="poly" id="edge12_Node000001_Node000010" title=" " alt="" coords="485,28,637,72,635,77,483,33"/>
+<area shape="rect" id="Node000014" href="$JsonSceneParser_8h.html" title="Minimal, dependency&#45;free JSON parser for evacuation scene files." alt="" coords="171,152,310,177"/>
+<area shape="poly" id="edge25_Node000001_Node000014" title=" " alt="" coords="430,33,270,146,267,142,427,29"/>
+<area shape="rect" id="Node000017" href="$SceneData_8h.html" title="Plain data structures describing a building evacuation scene." alt="" coords="303,233,407,258"/>
+<area shape="poly" id="edge32_Node000001_Node000017" title=" " alt="" coords="443,32,367,221,362,219,438,30"/>
+<area shape="poly" id="edge5_Node000003_Node000002" title=" " alt="" coords="794,265,781,268,514,320,513,314,780,263,792,260"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="986,313,1045,339"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="899,263,982,305,979,309,897,268"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="749,387,836,412"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="849,267,822,314,801,374,796,372,817,312,845,264"/>
+<area shape="rect" id="Node000006" href="$LinkedList_8h.html" title="Generic singly&#45;linked list with pointer&#45;based node storage." alt="" coords="653,313,751,339"/>
+<area shape="poly" id="edge6_Node000003_Node000006" title=" " alt="" coords="824,268,739,310,736,305,821,263"/>
+<area shape="rect" id="Node000008" href="$priority__queue_8h.html" title="Pointer&#45;based binary min&#45;heap priority queue." alt="" coords="831,313,959,339"/>
+<area shape="poly" id="edge9_Node000003_Node000008" title=" " alt="" coords="871,264,887,299,882,302,867,267"/>
+<area shape="poly" id="edge7_Node000006_Node000005" title=" " alt="" coords="718,337,769,376,765,380,715,341"/>
+<area shape="rect" id="Node000007" href="$Node_8h.html" title="Generic singly&#45;linked node used by LinkedList and Queue." alt="" coords="657,387,725,412"/>
+<area shape="poly" id="edge8_Node000006_Node000007" title=" " alt="" coords="703,339,698,374,692,373,698,339"/>
+<area shape="poly" id="edge11_Node000008_Node000005" title=" " alt="" coords="880,341,822,381,819,376,877,336"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="860,387,931,412"/>
+<area shape="poly" id="edge10_Node000008_Node000009" title=" " alt="" coords="898,339,898,373,893,373,893,339"/>
+<area shape="poly" id="edge13_Node000010_Node000002" title=" " alt="" coords="672,106,641,127,609,154,572,193,538,234,487,304,483,301,534,231,568,189,606,150,638,123,669,102"/>
+<area shape="poly" id="edge20_Node000010_Node000003" title=" " alt="" coords="757,102,803,119,824,133,843,150,858,180,864,211,858,212,853,181,839,154,821,137,800,124,755,107"/>
+<area shape="poly" id="edge14_Node000010_Node000004" title=" " alt="" coords="789,101,852,119,883,133,912,150,948,184,976,225,997,265,1010,299,1005,301,992,268,971,227,944,187,908,154,880,137,850,124,787,107"/>
+<area shape="poly" id="edge16_Node000010_Node000006" title=" " alt="" coords="666,106,639,126,626,138,616,153,615,164,617,177,614,223,615,242,624,264,643,287,667,304,663,309,639,291,620,267,610,243,609,223,611,177,609,164,612,151,622,135,635,122,663,102"/>
+<area shape="poly" id="edge19_Node000010_Node000008" title=" " alt="" coords="757,101,808,117,862,141,887,157,909,176,928,198,942,224,947,245,942,266,932,287,919,305,914,302,927,284,937,264,941,245,937,226,923,201,905,180,883,161,859,145,806,122,755,107"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="767,152,829,177"/>
+<area shape="poly" id="edge15_Node000010_Node000011" title=" " alt="" coords="708,102,770,142,767,147,705,106"/>
+<area shape="rect" id="Node000012" href="$Queue_8h.html" title="Generic FIFO queue built on LinkedList." alt="" coords="635,225,769,265"/>
+<area shape="poly" id="edge17_Node000010_Node000012" title=" " alt="" coords="670,106,651,120,633,137,623,156,622,166,624,176,639,198,659,215,655,219,635,201,620,178,616,167,617,155,629,134,647,116,667,102"/>
+<area shape="rect" id="Node000013" href="$SimEntities_8h.html" title="Per&#45;tick simulation entities: CellNode, Corridor, Person, WaitingQueue." alt="" coords="635,152,743,177"/>
+<area shape="poly" id="edge21_Node000010_Node000013" title=" " alt="" coords="691,104,691,138,686,138,686,104"/>
+<area shape="poly" id="edge18_Node000012_Node000006" title=" " alt="" coords="705,266,705,299,699,299,699,266"/>
+<area shape="poly" id="edge22_Node000013_Node000002" title=" " alt="" coords="675,180,499,307,496,303,671,175"/>
+<area shape="poly" id="edge24_Node000013_Node000003" title=" " alt="" coords="715,175,808,217,805,222,713,180"/>
+<area shape="poly" id="edge23_Node000013_Node000012" title=" " alt="" coords="693,177,699,211,694,212,688,178"/>
+<area shape="poly" id="edge29_Node000014_Node000002" title=" " alt="" coords="246,177,261,219,275,243,293,263,324,284,359,300,427,317,426,322,358,305,322,289,290,267,271,246,257,221,241,179"/>
+<area shape="poly" id="edge28_Node000014_Node000005" title=" " alt="" coords="242,178,243,219,249,243,260,264,310,316,359,348,410,366,465,373,587,374,658,376,736,384,736,389,658,381,587,379,464,379,409,371,357,353,306,320,256,267,244,245,238,220,237,178"/>
+<area shape="rect" id="Node000015" title=" " alt="" coords="5,233,79,258"/>
+<area shape="poly" id="edge26_Node000014_Node000015" title=" " alt="" coords="213,180,85,230,83,225,211,175"/>
+<area shape="rect" id="Node000016" title=" " alt="" coords="103,233,178,258"/>
+<area shape="poly" id="edge27_Node000014_Node000016" title=" " alt="" coords="228,180,168,226,165,222,224,175"/>
+<area shape="poly" id="edge30_Node000014_Node000017" title=" " alt="" coords="259,175,329,223,326,227,256,180"/>
+<area shape="poly" id="edge31_Node000017_Node000002" title=" " alt="" coords="374,256,443,303,440,308,371,260"/>
+</map>

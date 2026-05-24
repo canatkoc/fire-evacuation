@@ -1,0 +1,11 @@
+<map id="Corridor" name="Corridor">
+<area shape="rect" id="Node000001" title="A directed corridor connecting two CellNodes." alt="" coords="9,525,133,691"/>
+<area shape="poly" id="edge5_Node000001_Node000001" title=" " alt="" coords="134,584,152,591,159,608,157,619,150,626,146,622,152,616,154,608,148,595,132,589"/>
+<area shape="rect" id="Node000002" href="$structCellNode.html" title="A simulation&#45;side node mirroring a Graph vertex." alt="" coords="5,263,136,448"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="73,448,73,509,68,509,68,448"/>
+<area shape="poly" id="edge4_Node000002_Node000002" title=" " alt="" coords="137,331,155,338,163,355,160,366,153,374,149,370,155,364,157,356,151,342,135,336"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="31,135,110,200"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="73,200,73,246,68,246,68,200"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="5,5,136,85"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="73,99,73,134,68,134,68,99"/>
+</map>

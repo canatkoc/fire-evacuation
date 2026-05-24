@@ -1,0 +1,10 @@
+<map id="FireSimulator::DjItem" name="FireSimulator::DjItem">
+<area shape="rect" id="Node000001" title="Priority&#45;queue item for the fire&#45;aware Dijkstra." alt="" coords="5,511,159,576"/>
+<area shape="rect" id="Node000002" href="$structCellNode.html" title="A simulation&#45;side node mirroring a Graph vertex." alt="" coords="17,263,147,448"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="85,448,85,494,79,494,79,448"/>
+<area shape="poly" id="edge4_Node000002_Node000002" title=" " alt="" coords="148,331,166,338,174,355,171,366,164,374,161,370,167,364,169,356,163,342,146,336"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="43,135,121,200"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="85,200,85,246,79,246,79,200"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="17,5,147,85"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="85,99,85,134,79,134,79,99"/>
+</map>
