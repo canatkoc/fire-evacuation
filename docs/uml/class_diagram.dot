@@ -1,0 +1,56 @@
+// Fire Evacuation Simulator - Class Diagram (Graphviz/DOT)
+// Render to PNG:  dot -Tpng class_diagram.dot -o class_diagram.png
+// A PlantUML version (class_diagram.puml) is also provided.
+digraph FireEvacuationClasses {
+    rankdir=TB;
+    graph [fontname="Helvetica", nodesep=0.5, ranksep=0.9,
+           label="Fire Evacuation Route Planner and Simulator - Class Diagram",
+           labelloc=t, fontsize=18];
+    node [shape=record, fontname="Helvetica", fontsize=10, style=filled];
+    edge [fontname="Helvetica", fontsize=9];
+
+    cls_Node [fillcolor="#cfe2f3", label="{Node\<T\>|+ data : T\l+ next : Node*\l}"];
+    cls_LinkedList [fillcolor="#cfe2f3", label="{LinkedList\<T\>|- head : Node*\l- tail : Node*\l- size : int\l|+ push_back()\l+ pop_front() : T\l+ remove()\l+ clear()\l}"];
+    cls_Queue [fillcolor="#cfe2f3", label="{Queue\<T\>|- l_list : LinkedList\<T\>\l|+ enqueue()\l+ dequeue() : T\l+ is_empty() : bool\l}"];
+    cls_PriorityQueue [fillcolor="#cfe2f3", label="{PriorityQueue\<T,Compare\>|- root_ : HeapNode*\l- size_ : size_t\l|+ push()\l+ pop()\l+ top() : T\l}"];
+    cls_Graph [fillcolor="#cfe2f3", label="{Graph|- vertices : Vertex*\l- node_count_ : int\l|+ addNode() : bool\l+ addEdge() : bool\l+ shortestPath()\l+ nearestExit()\l}"];
+    cls_SceneNode [fillcolor="#d9ead3", label="{SceneNode|+ id : string\l+ type : string\l+ occupants : int\l+ flammability : double\l+ x, y : int\l}"];
+    cls_SceneEdge [fillcolor="#d9ead3", label="{SceneEdge|+ from, to : string\l+ capacity : int\l+ traversal_time : int\l}"];
+    cls_SceneData [fillcolor="#d9ead3", label="{SceneData|+ floors : int\l+ fire_origin : string\l+ fire_spread_rate : double\l|+ appendNode()\l+ appendEdge()\l}"];
+    cls_JsonSceneParser [fillcolor="#d9ead3", label="{JsonSceneParser (utility)|+ loadFromFile()\l+ loadFromString()\l}"];
+    cls_SceneLoader [fillcolor="#d9ead3", label="{SceneLoader (utility)|+ apply()\l+ applyLayout()\l+ loadInto()\l}"];
+    cls_CellNode [fillcolor="#fce5cd", label="{CellNode|+ id : string\l+ on_fire : bool\l+ fire_intensity : double\l+ people_in_node : int\l}"];
+    cls_Corridor [fillcolor="#fce5cd", label="{Corridor|+ traversal_time : int\l+ capacity : int\l+ current_load : int\l+ blocked : bool\l}"];
+    cls_Person [fillcolor="#fce5cd", label="{Person|+ id : int\l+ current_location : string\l+ evacuated : bool\l+ dead : bool\l}"];
+    cls_FireSimulator [fillcolor="#fce5cd", label="{FireSimulator|- graph_ : Graph*\l- nodes_head_ : CellNode*\l- corridors_head_ : Corridor*\l- people_head_ : Person*\l- time_step_ : int\l|+ addNode() : bool\l+ addCorridor() : bool\l+ igniteNode() : bool\l+ step()\l+ findSafestExit() : EvacPath\l+ simulationFinished() : bool\l}"];
+    cls_Layout [fillcolor="#d9d2e9", label="{Layout|- head_ : Pos*\l|+ set()\l+ get() : bool\l}"];
+    cls_SimulationController [fillcolor="#d9d2e9", label="{SimulationController|- sim_ : FireSimulator*\l- state_ : State\l- tick_interval_ : double\l|+ start()\l+ togglePause()\l+ singleStep()\l+ update()\l}"];
+    cls_Renderer [fillcolor="#d9d2e9", label="{Renderer|+ init() : bool\l+ drawScene()\l+ drawButton()\l+ present()\l}"];
+
+    // ----- Composition / aggregation -----
+    edge [dir=back, arrowtail=diamond];
+    cls_LinkedList -> cls_Node [label="owns *"];
+    cls_SceneData -> cls_SceneNode [label="owns *"];
+    cls_SceneData -> cls_SceneEdge [label="owns *"];
+    cls_FireSimulator -> cls_CellNode [label="owns *"];
+    cls_FireSimulator -> cls_Corridor [label="owns *"];
+    cls_FireSimulator -> cls_Person [label="owns *"];
+    edge [arrowtail=ediamond];
+    cls_Queue -> cls_LinkedList [label="composes 1"];
+
+    // ----- Dependency / association -----
+    edge [dir=forward, arrowtail=none, arrowhead=vee, style=dashed];
+    cls_Graph -> cls_PriorityQueue [label="uses"];
+    cls_FireSimulator -> cls_PriorityQueue [label="uses"];
+    cls_JsonSceneParser -> cls_SceneData [label="fills"];
+    cls_SceneLoader -> cls_JsonSceneParser [label="uses"];
+    cls_SceneLoader -> cls_FireSimulator [label="configures"];
+    cls_SceneLoader -> cls_Layout [label="configures"];
+    cls_SimulationController -> cls_FireSimulator [label="drives"];
+    cls_Renderer -> cls_FireSimulator [label="renders"];
+    cls_Renderer -> cls_Layout [label="reads"];
+
+    // ----- Association -----
+    edge [style=solid];
+    cls_FireSimulator -> cls_Graph [label="mirrors"];
+}

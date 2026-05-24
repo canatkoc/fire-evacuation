@@ -1,0 +1,12 @@
+{
+  "building": { "floors": 1, "fire_origin": "ROOM_X" },
+  "nodes": [
+    {"id": "ROOM_X", "type": "room",    "floor": 1, "occupants": 3, "flammability": 0.9},
+    {"id": "HALL_X", "type": "hallway", "floor": 1, "occupants": 0, "flammability": 0.9},
+    {"id": "EXIT_X", "type": "exit",    "floor": 1, "occupants": 0, "flammability": 0.0}
+  ],
+  "edges": [
+    {"from": "ROOM_X", "to": "HALL_X", "capacity": 1, "traversal_time": 9, "flammability": 0.95}
+  ],
+  "fire_spread_rate": 0.9
+}

@@ -1,0 +1,50 @@
+// Fire Evacuation Simulator - Simulation Tick Flow (Graphviz/DOT)
+// Rendered to PNG with:  dot -Tpng tick_flow.dot -o tick_flow.png
+// This is the behavioural diagram complementing the class diagram.
+// A PlantUML sequence diagram (sequence_main_flow.puml) is also provided.
+digraph SimulationTickFlow {
+    rankdir=TB;
+    graph [fontname="Helvetica", fontsize=16,
+           label="Fire Evacuation Simulator - One Simulation Tick (step())",
+           labelloc=t];
+    node [fontname="Helvetica", fontsize=10];
+    edge [fontname="Helvetica", fontsize=9];
+
+    start  [shape=ellipse, style=filled, fillcolor="#d9ead3", label="step() called"];
+    finish [shape=ellipse, style=filled, fillcolor="#f4cccc", label="tick complete"];
+
+    fire   [shape=box, style="filled,rounded", fillcolor="#fce5cd",
+            label="propagateFire()\nspread fire to neighbours,\nblock corridors over threshold"];
+    plan   [shape=box, style="filled,rounded", fillcolor="#cfe2f3",
+            label="findSafestExit() per person\nDijkstra over PriorityQueue,\npredictive fire-aware cost"];
+    move   [shape=box, style="filled,rounded", fillcolor="#cfe2f3",
+            label="stepPeople()\nadvance people along corridors"];
+
+    cap    [shape=diamond, style=filled, fillcolor="#fff2cc",
+            label="corridor at\ncapacity?"];
+    queue  [shape=box, style="filled,rounded", fillcolor="#d9d2e9",
+            label="enqueue person in\nWaitingQueue (FIFO)"];
+    walk   [shape=box, style="filled,rounded", fillcolor="#d9d2e9",
+            label="occupy corridor,\nadvance progress"];
+
+    reach  [shape=diamond, style=filled, fillcolor="#fff2cc",
+            label="reached an\nexit?"];
+    evac   [shape=box, style="filled,rounded", fillcolor="#d9ead3",
+            label="mark person\nas evacuated"];
+
+    cas    [shape=box, style="filled,rounded", fillcolor="#f4cccc",
+            label="processCasualties()\ntrapped / fire-encircled\npeople -> casualties"];
+    tick   [shape=box, style="filled,rounded", fillcolor="#efefef",
+            label="increment time_step_,\nrelease stale queues"];
+
+    start -> fire -> plan -> move;
+    move  -> cap;
+    cap   -> queue [label="yes"];
+    cap   -> walk  [label="no"];
+    queue -> reach;
+    walk  -> reach;
+    reach -> evac  [label="yes"];
+    reach -> cas   [label="no"];
+    evac  -> cas;
+    cas   -> tick -> finish;
+}
