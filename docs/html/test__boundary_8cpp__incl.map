@@ -1,0 +1,47 @@
+<map id="tests/edge_cases/test_boundary.cpp" name="tests/edge_cases/test_boundary.cpp">
+<area shape="rect" id="Node000001" title="Edge&#45;case and boundary tests for all custom data structures and the simulator." alt="" coords="236,5,399,45"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,93,75,119"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="252,48,89,94,88,89,250,43"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="99,93,179,119"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="276,48,178,90,176,85,273,43"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="505,387,591,412"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="309,47,284,104,273,141,269,178,269,254,270,280,275,301,285,318,303,337,335,353,383,367,491,388,490,393,382,373,333,358,300,341,281,322,270,303,265,281,264,254,264,178,268,140,279,103,304,44"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="483,313,541,339"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="331,44,376,117,498,301,494,304,371,120,326,47"/>
+<area shape="rect" id="Node000006" href="$Graph_8h.html" title="Adjacency&#45;list directed/undirected graph with Dijkstra shortest&#45;path." alt="" coords="559,240,737,265"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="335,44,402,113,448,154,497,190,546,215,595,233,593,238,544,220,495,194,444,158,398,117,331,47"/>
+<area shape="rect" id="Node000008" href="$LinkedList_8h.html" title="Generic singly&#45;linked list with pointer&#45;based node storage." alt="" coords="792,313,891,339"/>
+<area shape="poly" id="edge15_Node000001_Node000008" title=" " alt="" coords="399,26,486,31,590,42,701,62,810,91,895,115,964,137,994,152,1022,172,1049,201,1074,239,1082,262,1076,282,1058,297,1034,308,970,321,904,327,904,321,970,316,1032,303,1056,292,1071,279,1076,262,1070,241,1044,204,1018,176,991,156,962,142,894,120,809,96,700,67,589,48,485,37,399,31"/>
+<area shape="rect" id="Node000010" href="$priority__queue_8h.html" title="Pointer&#45;based binary min&#45;heap priority queue." alt="" coords="313,313,441,339"/>
+<area shape="poly" id="edge18_Node000001_Node000010" title=" " alt="" coords="290,47,268,68,250,94,248,106,251,118,265,196,278,227,301,264,322,286,346,304,343,308,318,290,297,267,273,230,260,197,245,119,243,106,246,92,264,65,287,44"/>
+<area shape="rect" id="Node000012" href="$Queue_8h.html" title="Generic FIFO queue built on LinkedList." alt="" coords="879,240,1060,265"/>
+<area shape="poly" id="edge16_Node000001_Node000012" title=" " alt="" coords="399,28,476,35,567,47,663,65,758,91,833,119,863,138,899,165,931,195,956,227,951,230,927,199,896,169,860,142,831,124,757,96,662,70,566,52,475,40,398,34"/>
+<area shape="rect" id="Node000013" href="$FireSimulator_8h.html" title="Core fire&#45;evacuation simulation engine." alt="" coords="551,93,745,119"/>
+<area shape="poly" id="edge19_Node000001_Node000013" title=" " alt="" coords="397,43,587,88,586,93,396,48"/>
+<area shape="poly" id="edge7_Node000006_Node000004" title=" " alt="" coords="642,267,566,377,561,374,638,264"/>
+<area shape="poly" id="edge8_Node000006_Node000005" title=" " alt="" coords="627,268,547,309,545,305,625,263"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="683,313,741,339"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="661,264,695,301,691,305,657,267"/>
+<area shape="poly" id="edge9_Node000006_Node000008" title=" " alt="" coords="680,263,798,306,796,311,678,268"/>
+<area shape="poly" id="edge12_Node000006_Node000010" title=" " alt="" coords="605,268,435,312,434,307,604,263"/>
+<area shape="poly" id="edge10_Node000008_Node000004" title=" " alt="" coords="795,341,605,387,604,382,794,336"/>
+<area shape="rect" id="Node000009" href="$Node_8h.html" title="Generic singly&#45;linked node used by LinkedList and Queue." alt="" coords="807,387,875,412"/>
+<area shape="poly" id="edge11_Node000008_Node000009" title=" " alt="" coords="844,339,844,373,839,373,839,339"/>
+<area shape="poly" id="edge14_Node000010_Node000004" title=" " alt="" coords="406,336,509,379,507,384,404,341"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="342,387,413,412"/>
+<area shape="poly" id="edge13_Node000010_Node000011" title=" " alt="" coords="380,339,380,373,375,373,375,339"/>
+<area shape="poly" id="edge17_Node000012_Node000008" title=" " alt="" coords="950,268,876,309,873,304,947,263"/>
+<area shape="poly" id="edge20_Node000013_Node000005" title=" " alt="" coords="572,121,531,139,513,152,498,168,490,184,486,200,485,236,493,271,503,300,498,302,488,272,480,237,480,200,485,182,494,165,509,148,528,134,570,116"/>
+<area shape="poly" id="edge26_Node000013_Node000006" title=" " alt="" coords="670,117,689,130,708,148,719,169,720,181,717,193,701,216,681,234,678,230,697,213,712,191,715,181,714,171,703,152,686,134,667,121"/>
+<area shape="poly" id="edge21_Node000013_Node000007" title=" " alt="" coords="676,116,708,136,737,165,751,191,758,214,758,237,752,266,744,286,733,304,728,301,739,284,747,265,753,237,753,214,747,193,733,168,705,140,673,121"/>
+<area shape="poly" id="edge23_Node000013_Node000008" title=" " alt="" coords="682,116,723,136,762,165,788,198,810,234,836,299,832,301,805,237,784,201,758,169,720,140,680,121"/>
+<area shape="poly" id="edge25_Node000013_Node000010" title=" " alt="" coords="586,121,532,139,505,152,480,169,449,200,423,236,389,302,384,300,419,233,445,196,477,165,502,148,530,134,585,116"/>
+<area shape="poly" id="edge24_Node000013_Node000012" title=" " alt="" coords="714,116,786,135,861,164,910,195,949,228,946,232,907,200,859,169,784,140,712,121"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="507,167,570,192"/>
+<area shape="poly" id="edge22_Node000013_Node000014" title=" " alt="" coords="632,121,570,161,567,157,629,116"/>
+<area shape="rect" id="Node000015" href="$SimEntities_8h.html" title="Per&#45;tick simulation entities: CellNode, Corridor, Person, WaitingQueue." alt="" coords="594,167,702,192"/>
+<area shape="poly" id="edge27_Node000013_Node000015" title=" " alt="" coords="651,119,651,153,645,153,645,119"/>
+<area shape="poly" id="edge28_Node000015_Node000005" title=" " alt="" coords="619,194,583,214,549,242,531,271,520,301,515,299,526,268,545,238,580,209,617,190"/>
+<area shape="poly" id="edge30_Node000015_Node000006" title=" " alt="" coords="651,192,651,226,645,226,645,192"/>
+<area shape="poly" id="edge29_Node000015_Node000012" title=" " alt="" coords="700,189,905,234,904,240,699,195"/>
+</map>

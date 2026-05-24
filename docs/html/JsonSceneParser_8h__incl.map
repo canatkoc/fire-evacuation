@@ -1,0 +1,14 @@
+<map id="include/io/JsonSceneParser.h" name="include/io/JsonSceneParser.h">
+<area shape="rect" id="Node000001" title="Minimal, dependency&#45;free JSON parser for evacuation scene files." alt="" coords="143,5,349,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,79,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="214,33,89,77,87,72,212,28"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="103,79,178,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="231,33,170,73,168,69,228,28"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="203,79,289,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="249,31,249,65,243,65,243,31"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="342,152,401,177"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="259,29,304,77,356,139,352,143,300,80,255,33"/>
+<area shape="rect" id="Node000006" href="$SceneData_8h.html" title="Plain data structures describing a building evacuation scene." alt="" coords="365,79,469,104"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="274,28,377,71,375,76,272,33"/>
+<area shape="poly" id="edge6_Node000006_Node000005" title=" " alt="" coords="411,106,388,142,384,139,407,103"/>
+</map>

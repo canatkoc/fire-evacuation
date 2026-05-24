@@ -1,0 +1,7 @@
+<map id="tests/test_main.cpp" name="tests/test_main.cpp">
+<area shape="rect" id="Node000001" title="Entry point for the project&#39;s unit + integration test suite." alt="" coords="27,5,177,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,92,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="95,33,68,69,63,66,91,29"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="117,79,197,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="113,29,142,66,137,69,109,33"/>
+</map>

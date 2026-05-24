@@ -1,0 +1,42 @@
+<map id="SimulationController" name="SimulationController">
+<area shape="rect" id="Node000001" title=" " alt="" coords="341,2640,514,2945"/>
+<area shape="rect" id="Node000002" href="$classFireSimulator.html" title="Fire&#45;aware building evacuation simulator." alt="" coords="337,1912,517,2577"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="430,2577,430,2623,425,2623,425,2577"/>
+<area shape="rect" id="Node000003" href="$classGraph.html" title="Weighted graph with pointer&#45;based adjacency lists and Dijkstra routing." alt="" coords="5,669,215,1135"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="172,1134,203,1313,213,1408,217,1501,217,1818,219,1859,227,1900,253,1979,289,2053,330,2119,326,2122,284,2056,248,1981,221,1901,214,1860,211,1818,211,1501,208,1408,198,1314,167,1135"/>
+<area shape="rect" id="Node000004" href="$structGraph_1_1Vertex.html" title="A vertex (node) in the graph." alt="" coords="124,307,227,433"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="126,401,78,438,58,462,42,488,28,527,21,568,19,611,23,653,18,653,14,611,15,568,23,526,37,486,53,458,75,434,122,397"/>
+<area shape="poly" id="edge9_Node000004_Node000004" title=" " alt="" coords="228,343,245,351,251,359,253,370,251,382,244,390,240,387,246,380,248,370,246,361,242,355,226,348"/>
+<area shape="rect" id="Node000007" href="$structGraph_1_1Edge.html" title="A directed weighted edge between two vertices." alt="" coords="91,540,215,645"/>
+<area shape="poly" id="edge7_Node000007_Node000004" title=" " alt="" coords="164,434,155,487,153,523,148,523,150,486,158,433"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="372,135,451,200"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="376,202,241,316,238,312,372,198"/>
+<area shape="rect" id="Node000008" href="$structCellNode.html" title="A simulation&#45;side node mirroring a Graph vertex." alt="" coords="549,1219,679,1404"/>
+<area shape="poly" id="edge11_Node000008_Node000005" title=" " alt="" coords="452,177,496,195,540,222,563,246,577,276,610,401,633,531,646,661,652,789,652,910,647,1022,631,1202,626,1202,642,1022,646,910,647,789,641,661,628,531,605,402,571,278,559,249,536,226,494,200,450,182"/>
+<area shape="rect" id="Node000010" href="$structPerson.html" title="A single person being evacuated through the building." alt="" coords="330,277,493,463"/>
+<area shape="poly" id="edge17_Node000010_Node000005" title=" " alt="" coords="414,200,414,261,409,261,409,200"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="346,5,477,85"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="414,99,414,134,409,134,409,99"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="177,539,185,515,189,483,188,449,193,449,194,483,190,517,182,540"/>
+<area shape="poly" id="edge8_Node000007_Node000007" title=" " alt="" coords="216,574,234,579,241,592,239,601,232,607,229,603,234,598,236,593,230,584,214,579"/>
+<area shape="poly" id="edge10_Node000002_Node000008" title=" " alt="" coords="682,1378,737,1452,762,1495,781,1540,793,1586,796,1624,791,1661,781,1707,761,1770,736,1831,706,1891,672,1948,600,2052,530,2139,526,2135,596,2049,668,1945,701,1888,731,1829,756,1768,775,1706,786,1660,791,1623,787,1587,775,1542,757,1498,733,1455,677,1381"/>
+<area shape="poly" id="edge12_Node000008_Node000008" title=" " alt="" coords="681,1275,699,1286,704,1297,706,1311,703,1328,696,1339,691,1337,698,1326,701,1311,699,1299,695,1290,678,1279"/>
+<area shape="rect" id="Node000009" href="$structCorridor.html" title="A directed corridor connecting two CellNodes." alt="" coords="525,1541,649,1707"/>
+<area shape="poly" id="edge14_Node000009_Node000008" title=" " alt="" coords="609,1404,598,1525,593,1525,603,1404"/>
+<area shape="poly" id="edge13_Node000002_Node000009" title=" " alt="" coords="589,1707,586,1760,584,1805,577,1850,554,1934,526,2017,520,2015,548,1932,571,1849,578,1805,581,1760,583,1707"/>
+<area shape="poly" id="edge15_Node000009_Node000009" title=" " alt="" coords="651,1600,668,1607,676,1624,673,1635,667,1642,663,1638,669,1632,671,1624,665,1611,649,1605"/>
+<area shape="rect" id="Node000011" href="$structWaitingQueue.html" title="A per&#45;corridor FIFO queue of people blocked by a capacity bottleneck." alt="" coords="363,1784,492,1849"/>
+<area shape="poly" id="edge20_Node000011_Node000009" title=" " alt="" coords="535,1709,492,1762,479,1775,476,1771,488,1758,531,1705"/>
+<area shape="poly" id="edge16_Node000002_Node000010" title=" " alt="" coords="359,464,335,526,327,558,325,591,325,1818,328,1881,337,1944,332,1945,323,1881,319,1818,319,591,322,558,330,524,354,462"/>
+<area shape="poly" id="edge18_Node000010_Node000010" title=" " alt="" coords="494,345,512,353,519,370,517,381,510,388,506,385,512,378,514,370,508,357,492,350"/>
+<area shape="rect" id="Node000014" href="$structNode.html" title=" " alt="" coords="363,560,497,625"/>
+<area shape="poly" id="edge24_Node000014_Node000010" title=" " alt="" coords="422,462,429,543,423,544,416,463"/>
+<area shape="poly" id="edge19_Node000002_Node000011" title=" " alt="" coords="430,1850,430,1896,425,1896,425,1850"/>
+<area shape="poly" id="edge26_Node000011_Node000011" title=" " alt="" coords="493,1802,511,1807,519,1817,510,1827,506,1823,513,1817,508,1811,492,1808"/>
+<area shape="rect" id="Node000012" href="$classQueue.html" title=" " alt="" coords="359,1541,501,1707"/>
+<area shape="poly" id="edge21_Node000011_Node000012" title=" " alt="" coords="432,1707,431,1767,425,1767,426,1707"/>
+<area shape="rect" id="Node000013" href="$classLinkedList.html" title=" " alt="" coords="360,1159,524,1464"/>
+<area shape="poly" id="edge22_Node000012_Node000013" title=" " alt="" coords="439,1464,436,1525,431,1524,433,1464"/>
+<area shape="poly" id="edge23_Node000013_Node000014" title=" " alt="" coords="433,626,442,1142,437,1142,428,626"/>
+<area shape="poly" id="edge25_Node000014_Node000014" title=" " alt="" coords="498,574,516,580,523,592,521,601,514,607,511,603,516,598,518,593,512,584,496,579"/>
+</map>

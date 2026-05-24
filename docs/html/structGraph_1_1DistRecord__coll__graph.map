@@ -1,0 +1,15 @@
+<map id="Graph::DistRecord" name="Graph::DistRecord">
+<area shape="rect" id="Node000001" title="A per&#45;vertex record used by Dijkstra&#39;s distance table." alt="" coords="5,475,137,561"/>
+<area shape="poly" id="edge8_Node000001_Node000001" title=" " alt="" coords="138,499,156,505,164,518,161,526,155,532,152,528,157,523,159,518,153,509,137,504"/>
+<area shape="rect" id="Node000002" href="$structGraph_1_1Vertex.html" title="A vertex (node) in the graph." alt="" coords="181,263,284,388"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="183,376,148,414,110,463,106,460,144,410,179,373"/>
+<area shape="poly" id="edge7_Node000002_Node000002" title=" " alt="" coords="285,305,303,311,311,325,308,334,302,340,298,336,304,332,305,326,299,315,283,311"/>
+<area shape="rect" id="Node000005" href="$structGraph_1_1Edge.html" title="A directed weighted edge between two vertices." alt="" coords="231,465,355,571"/>
+<area shape="poly" id="edge5_Node000005_Node000002" title=" " alt="" coords="225,388,225,415,231,441,235,450,230,452,226,442,220,415,219,388"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="193,135,272,200"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="235,200,235,246,230,246,230,200"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="167,5,298,85"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="235,99,235,134,230,134,230,99"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="276,466,261,413,258,404,263,403,266,411,281,464"/>
+<area shape="poly" id="edge6_Node000005_Node000005" title=" " alt="" coords="356,499,374,505,381,518,379,526,372,532,369,528,374,523,376,518,370,509,354,504"/>
+</map>

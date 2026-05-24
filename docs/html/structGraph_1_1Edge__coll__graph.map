@@ -1,0 +1,12 @@
+<map id="Graph::Edge" name="Graph::Edge">
+<area shape="rect" id="Node000001" title="A directed weighted edge between two vertices." alt="" coords="5,135,129,240"/>
+<area shape="poly" id="edge6_Node000001_Node000001" title=" " alt="" coords="130,171,148,176,156,187,153,195,147,200,144,195,149,192,151,188,145,180,129,176"/>
+<area shape="rect" id="Node000002" href="$structGraph_1_1Vertex.html" title="A vertex (node) in the graph." alt="" coords="128,303,231,428"/>
+<area shape="poly" id="edge4_Node000002_Node000001" title=" " alt="" coords="59,240,60,259,66,277,87,307,116,330,112,334,83,310,61,280,55,260,54,240"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="165,304,148,265,138,252,143,249,152,263,169,301"/>
+<area shape="poly" id="edge5_Node000002_Node000002" title=" " alt="" coords="232,345,249,351,257,365,255,374,248,380,245,376,250,372,252,366,246,355,230,351"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="223,155,301,220"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="250,221,218,289,213,287,245,219"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="197,5,327,85"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="265,99,265,154,259,154,259,99"/>
+</map>

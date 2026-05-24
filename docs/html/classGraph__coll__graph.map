@@ -1,0 +1,14 @@
+<map id="Graph" name="Graph">
+<area shape="rect" id="Node000001" title="Weighted graph with pointer&#45;based adjacency lists and Dijkstra routing." alt="" coords="5,465,215,931"/>
+<area shape="rect" id="Node000002" href="$structGraph_1_1Vertex.html" title="A vertex (node) in the graph." alt="" coords="196,263,299,388"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="197,354,162,379,146,395,134,413,117,451,112,449,129,411,142,392,158,375,194,349"/>
+<area shape="poly" id="edge7_Node000002_Node000002" title=" " alt="" coords="300,305,317,311,325,325,323,334,316,340,313,336,318,332,320,326,314,315,298,311"/>
+<area shape="rect" id="Node000005" href="$structGraph_1_1Edge.html" title="A directed weighted edge between two vertices." alt="" coords="241,645,365,751"/>
+<area shape="poly" id="edge5_Node000005_Node000002" title=" " alt="" coords="247,388,246,412,246,441,263,540,286,629,280,630,258,541,241,442,241,412,241,388"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="208,135,287,200"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="250,200,250,246,245,246,245,200"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="182,5,313,85"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="250,99,250,134,245,134,245,99"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="300,645,294,537,286,475,275,413,273,404,279,403,281,411,292,474,299,537,305,645"/>
+<area shape="poly" id="edge6_Node000005_Node000005" title=" " alt="" coords="367,647,377,653,385,663,390,679,392,698,389,722,381,739,376,736,384,721,387,698,385,680,380,666,373,657,364,651"/>
+</map>

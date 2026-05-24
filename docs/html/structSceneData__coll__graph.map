@@ -1,0 +1,15 @@
+<map id="SceneData" name="SceneData">
+<area shape="rect" id="Node000001" title="Full parsed scene: a building, its nodes and its corridors." alt="" coords="127,505,260,691"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="154,135,233,200"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="155,185,123,199,88,220,57,246,32,279,13,322,8,359,15,397,32,442,48,471,68,497,116,542,112,546,64,501,43,473,27,444,10,398,3,359,8,320,27,276,53,242,85,215,120,194,153,180"/>
+<area shape="rect" id="Node000004" href="$structSceneNode.html" title="One building node (room, hallway, stairwell or exit)." alt="" coords="124,277,264,443"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="196,200,196,261,191,261,191,200"/>
+<area shape="rect" id="Node000005" href="$structSceneEdge.html" title="One corridor (graph edge) connecting two nodes." alt="" coords="357,307,481,413"/>
+<area shape="poly" id="edge7_Node000005_Node000002" title=" " alt="" coords="235,192,290,229,347,275,366,293,362,297,344,279,287,234,232,196"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="128,5,259,85"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="196,99,196,134,191,134,191,99"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="196,443,196,489,191,489,191,443"/>
+<area shape="poly" id="edge5_Node000004_Node000004" title=" " alt="" coords="265,337,283,345,290,360,288,370,281,376,277,373,283,367,285,360,279,349,263,342"/>
+<area shape="poly" id="edge6_Node000001_Node000005" title=" " alt="" coords="375,415,348,444,274,520,270,517,344,441,371,411"/>
+<area shape="poly" id="edge8_Node000005_Node000005" title=" " alt="" coords="482,337,500,344,508,360,505,370,499,377,495,373,500,367,502,360,496,348,480,342"/>
+</map>
