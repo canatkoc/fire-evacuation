@@ -14,6 +14,8 @@ void run_data_structures_unit_tests();
 void run_fire_simulator_tests();
 void run_graph_integration_tests();
 void run_scene_io_tests();
+void run_performance_tests();
+void run_edge_case_tests();
 
 int main() {
     try {
@@ -21,6 +23,8 @@ int main() {
         run_fire_simulator_tests();
         run_graph_integration_tests();
         run_scene_io_tests();
+        run_performance_tests();
+        run_edge_case_tests();
         std::cout << "\nSUMMARY: all tests passed\n";
         return 0;
     } catch (const std::exception& ex) {

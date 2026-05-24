@@ -34,7 +34,9 @@ TEST_SRCS := tests/test_main.cpp \
              tests/unit/test_data_structures.cpp \
              tests/unit/test_fire_simulator.cpp \
              tests/integration/test_graph_workflow.cpp \
-             tests/integration/test_scene_io.cpp
+             tests/integration/test_scene_io.cpp \
+             tests/performance/test_performance.cpp \
+             tests/edge_cases/test_boundary.cpp
 
 # ---- Output binaries --------------------------------------------------------
 DEMO_BIN  := $(BUILD_DIR)/sim_demo
@@ -156,9 +158,4 @@ memcheck: $(TEST_BIN)
 
 # =============================================================================
 # HOUSEKEEPING
-# =============================================================================
-$(BUILD_DIR):
-	mkdir -p $(BUILD_DIR)
-
-clean:
-	rm -rf $(BUILD_DIR) docs/html
+# ==================================================
